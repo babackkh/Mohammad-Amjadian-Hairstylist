@@ -18,3 +18,11 @@
 .hidden {
   display: none;
 }
+.spacer {
+  flex: 1 1 auto;
+}
+.top-header {
+  background-color: #000000;
+  opacity: .3;
+  height: 200px;
+}
