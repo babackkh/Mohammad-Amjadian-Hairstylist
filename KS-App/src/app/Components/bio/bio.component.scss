@@ -1,0 +1,23 @@
+.row {
+    min-height: 100%;
+    min-height: 100vh;
+    .column {
+        padding: 0 0;
+        margin-top: 10vh;
+    }
+    img {
+        width: calc(1.6vw + 19%);
+        height: auto;
+    }
+    .mat-body-1 {
+        line-height: 1.45 !important;
+    }
+}
+@media (min-width: 0) {
+    .container {
+        max-width: 79.167vw;
+    }
+}
+
+
+

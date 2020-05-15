@@ -1,7 +1,10 @@
 .sidenav-container {
   height: 100%;
+  background-color: #000000;
 }
-
+.sidenav-content {
+  background-color: #000000;
+}
 .sidenav {
   width: 100vw;
 }
@@ -13,7 +16,7 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .hidden {
   display: none;
@@ -21,8 +24,140 @@
 .spacer {
   flex: 1 1 auto;
 }
+.primary {
+  color: #0ffff1;
+}
+.opacity {
+  opacity: 1;
+}
 .top-header {
-  background-color: #000000;
-  opacity: .3;
-  height: 200px;
+  background-color: rgba($color: #000000, $alpha: .3);
+  height: 19vh;
+  position: fixed;
+  z-index: 5;
+  padding: 0 1.111vw;
+  span {
+    display: inherit;
+    opacity: 1;
+    width: 21%;
+    height: auto;
+  }
+  .brand-name {
+    color: #ffffff;
+    opacity: 1;
+    margin-left: 12%;
+    .mat-headline {
+      height: calc(.3vw + .8em);
+    }
+    .mat-body-1 {
+      font-size: calc(.44vw + .4em) !important;
+    }
+  }
+  .white {
+    color: #ffffff;
+  }
+  .nav-links {
+    width: 36%;
+    cursor: pointer;
+    a {
+      display: inline-block;
+      width: 6em;
+      text-align: center;
+      .mat-headline {
+        font-size: calc(1.45vw + .5em) !important;
+        opacity: .45;
+        transition: opacity .3s ease-in;
+        margin: 0 !important;
+      }
+    }
+    .active .mat-headline {
+      opacity: 1;
+      transition: opacity .3s ease-in;
+    } 
+  }
+}
+
+//////Link Underline Styles////////
+.underline, .home , .bio , .learn, .call {
+  display: table;
+  width: calc(13.45vw + 9em);
+  height: 0.417vw;
+  position: fixed;
+  z-index: 5;
+  top: calc(17.96vh + .97em - 10px);
+  left: 2.2em;
+  background-color: #0ffff1;
+  transition: all .3s linear;
+}
+.bio , .call {
+  width: 7%;
+}
+.bio {
+  transform: translateX(64vw);
+}
+.learn {
+  transform: translateX(74.5vw);
+  width: 9%;
+}
+.call {
+  transform: translateX(87.5vw);
+}
+//////Link Underline Styles////////
+
+@media (max-width: 575.98px) {
+  .margin-adj {
+    margin: 1% 0 8% !important;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bio {
+    transform: translateX(67.5vw);
+  }
+  .learn {
+    transform: translateX(76vw);
+  }
+  .call {
+    transform: translateX(86vw);
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bio {
+    transform: translateX(62vw);
+  }
+  .learn {
+    transform: translateX(72.5vw);
+  }
+  .call {
+    transform: translateX(85.5vw);
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .bio {
+    transform: translateX(63vw);
+  }
+  .learn {
+    transform: translateX(73.5vw);
+  }
+  .call {
+    transform: translateX(86.5vw);
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 2560px) {
+  .bio {
+    transform: translateX(65vw);
+  }
+  .learn {
+    transform: translateX(75.5vw);
+  }
+  .call {
+    transform: translateX(88.5vw);
+  }
 }

@@ -1,0 +1,212 @@
+.main-bg {
+    background-image: url('../../../../assets/workshops.png');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .close-link {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 1;
+        .close-icon {
+            width: 4.444vw;
+            height: 4.444vw;
+            margin: auto;
+            position: relative;
+            margin-top: 1rem;     
+        }
+    }
+    .main-row {
+        min-height: 100%;
+        min-height: 100vh;
+        .video-tut , .hair-book , .workshop {
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 23.611vw;
+            height: 25.417vw;
+        }
+        .mat-display-1 {
+            font-size: 2.361vw;
+            width: fit-content;
+            color: rgba($color: #ffffff, $alpha: .45);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: color .3s ease-out;
+        }
+        .op-1 {color: rgba($color: #ffffff, $alpha: 1.0);
+            transition: color .3s ease-in;
+        }
+        button {
+            height: 2.5em;
+            color: rgba($color: #ffffff, $alpha: .8);
+            background-color: rgba($color: #000000, $alpha: .6);
+            border-radius: 0 !important;
+            padding: .5rem 2rem;
+            width: 10rem;
+        }
+        .description {
+            position: absolute;
+            top: 56%;
+            width: 90%;
+            left: 2%;
+            visibility: hidden;
+            transition: all .15s ease-out;
+            .col-12 {
+                padding-right: 0;
+            }
+        }
+        .show-text {
+            visibility: visible;
+            transition: all .3s ease-in;
+        }
+        .mat-body-1 {
+            color: rgba($color: #ffffff, $alpha: .4);
+        }
+    }
+    .close-icon::after , .close-icon::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: rgba($color: #d1d1d1, $alpha: .5);
+        position: absolute;
+        top: 50%;
+    }
+    .close-icon::after {transform: rotateZ(45deg);}
+    .close-icon::before {transform: rotateZ(-45deg);}
+}
+.clip {
+    clip-path: inset(18.45vw 12vw 18.45vw 64vw);
+    -webkit-clip-path: inset(18.45vw 12vw 18.45vw 64vw);
+    -moz-clip-path: inset(18.45vw 12vw 18.45vw 64vw);
+    -o-clip-path: inset(18.45vw 12vw 18.45vw 64vw);
+    -ms-clip-path: inset(18.45vw 12vw 18.45vw 64vw);
+    transition: clip-path .3s ease !important;
+}
+.unclip {
+    clip-path: inset(0% 0% 0% 0%) !important;
+    -webkit-clip-path: inset(0% 0% 0% 0%) !important;
+    -moz-clip-path: inset(0% 0% 0% 0%) !important;
+    -o-clip-path: inset(0% 0% 0% 0%) !important;
+    -ms-clip-path: inset(0% 0% 0% 0%) !important;
+    transition: clip-path .3s ease !important;
+}
+
+@media (min-width: 0) {
+    .container {
+        max-width: 79.167vw !important;
+    }
+}
+@media (min-width: 0) and (max-width: 575.98px) {
+    .main-bg {
+        height: 125vh;
+    }
+    .main-row {
+        min-height: 125% !important;
+        min-height: 125vh !important;
+    }
+    .video-tut , .hair-book , .workshop {
+        width: 43.611vw !important;
+        height: 45.417vw !important;
+    }
+    .workshop {
+        margin-top: 15vh;
+    }
+    .offset-left-xs {
+        margin-left: 19%;
+    }
+    .mat-display-1 {
+        font-size: 5.361vw !important;
+        width: fit-content;
+        left: 100% !important;
+        top: 40% !important;
+        font-weight: 300;
+    }
+    .margin-top {
+        margin-top: 15%;
+    }
+    button {
+        font-size: 2.904vw;
+        width: 23.889vw !important;
+        padding: 0.3em 1em !important;
+    }
+    .mat-body-1 {
+        font-size: 3.17vw !important;
+        padding-top: 40vh;
+    }
+    .description {
+        top: 0 !important;
+        width: 100% !important;
+        left: 0 !important;
+    }
+    .close-link {
+        top: 15% !important;
+    }
+    .clip {
+        clip-path: inset(67% 26vw 7% 29vw);
+        -webkit-clip-path: inset(67% 26vw 7% 29vw);
+        -moz-clip-path: inset(67% 26vw 7% 29vw);
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .video-tut , .hair-book , .workshop {
+        width: 24.611vw !important;
+        height: 26.417vw !important;
+    }
+    .clip {
+        clip-path: inset(45.6vw 11vw 45.6vw 65vw);
+        -webkit-clip-path: inset(45.6vw 11vw 45.6vw 65vw);
+        -moz-clip-path: inset(45.6vw 11vw 45.6vw 65vw);
+    }
+}
+@media (width: 768px) {
+    .clip {
+        clip-path: inset(40% 11vw 40% 65vw);
+        -webkit-clip-path: inset(40% 11vw 40% 65vw);
+        -moz-clip-path: inset(40% 11vw 40% 65vw);
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 769px) and (max-width: 991.98px) {
+    .clip {
+        clip-path: inset(40% 11vw 40% 64vw);
+        -webkit-clip-path: inset(40% 11vw 40% 64vw);
+        -moz-clip-path: inset(40% 11vw 40% 64vw);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1024.98px) {
+    .clip {
+        clip-path: inset(40% 11.4vw 40% 64.4vw);
+        -webkit-clip-path: inset(40% 11.4vw 40% 64.4vw);
+        -moz-clip-path: inset(40% 11.4vw 40% 64.4vw);
+    }
+}
+@media (min-width: 1025px) and (max-width: 1112.98px) {
+    .clip {
+        clip-path: inset(33% 11.4vw 33% 64.4vw);
+        -webkit-clip-path: inset(33% 11.4vw 33% 64.4vw);
+        -moz-clip-path: inset(33% 11.4vw 33% 64.4vw);
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1366px) {
+    .clip {
+        clip-path: inset(36% 12vw 36% 64vw);
+        -webkit-clip-path: inset(36% 12vw 36% 64vw);
+        -moz-clip-path: inset(36% 12vw 36% 64vw);
+    }
+}
+

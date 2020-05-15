@@ -1,3 +1,5 @@
 <app-navbar>
-  <app-home></app-home>
+  <div class="router-outlet" [@fadeAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </app-navbar>

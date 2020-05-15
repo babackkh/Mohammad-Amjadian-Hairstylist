@@ -1,0 +1,70 @@
+.row {
+    min-height: 100%;
+    min-height: 100vh;
+    .video-tut , .hair-book , .workshop {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 23.611vw;
+        height: 25.417vw;
+    }
+    .mat-display-1 {
+        font-size: 2.361vw;
+        font-weight: 300;
+        width: fit-content;
+        color: rgba($color: #ffffff, $alpha: .45);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .video-tut {
+        background-image: url('../../../assets/1.png');
+    }
+    .hair-book {
+        background-image: url('../../../assets/f41ffc2ecddfc53dce6f000ae51c7470.png');
+    }
+    .workshop {
+        background-image: url('../../../assets/df34af74081c289f25ed20aba4c07092.png');
+    }
+}
+@media (min-width: 0) {
+    .container {
+        max-width: 79.167vw !important;
+    }
+}
+
+@media (min-width: 0) and (max-width: 575.98px) {
+    .row {
+        min-height: 86%;
+        min-height: 86vh;
+        margin-top: 5rem;
+    }
+    .video-tut , .hair-book , .workshop {
+        width: 43.611vw !important;
+        height: 45.417vw !important;
+    }
+    .offset-left-xs {
+        margin-left: 19%;
+    }
+    .mat-display-1 {
+        font-size: 4.261vw !important;
+        font-weight: 300;
+    }
+    .margin-top {
+        margin-top: 15%;
+    }
+}
+  
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .video-tut , .hair-book , .workshop {
+        width: 24.611vw !important;
+        height: 26.417vw !important;
+    }
+}
+
+
+
+
