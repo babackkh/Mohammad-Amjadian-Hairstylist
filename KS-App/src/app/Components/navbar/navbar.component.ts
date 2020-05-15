@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, filter } from 'rxjs/operators';
 import { Router, NavigationEnd } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,9 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   activeClass: string;
+  @ViewChild('drawer', {static: false}) sidenav: MatSidenav;
+
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -18,8 +22,6 @@ export class NavbarComponent implements OnInit {
       shareReplay()
     );
     
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
-  
   ngOnInit() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd))
@@ -41,6 +43,11 @@ export class NavbarComponent implements OnInit {
           }
       });
   }
-  
+  onSidenavClick(routeName: string) {
+    setTimeout(() => {
+      this.router.navigate([`${routeName}`]);
+      this.sidenav.close();
+    }, 400);
+  }
 
 }

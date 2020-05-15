@@ -5,7 +5,7 @@
     background-position-x: 60%;
 }
 .hero-section {
-    margin-top: 20%;
+    margin-top: 25%;
     text-align: center;
     .title-text {
         font-family: "didot_lightregular" !important;
@@ -88,6 +88,7 @@ footer {
             background-image: url('../../../assets/IMAGE\ 1398-04-29\ 030735.jpg');
             background-position: center;
             background-size: contain;
+            background-repeat: no-repeat;
             .next-overlay {
                 position: absolute;
                 left: 0;
@@ -114,7 +115,7 @@ footer {
         max-width: 79.167vw;
     }
 }
-@media screen and (min-height: 1024px) {
+@media (min-height: 1024px) {
     .hero-section {
         margin-top: 40%;
     }
@@ -122,10 +123,52 @@ footer {
         padding-top: 20% !important;
     }
 }
-
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+@media (max-width: 765px) {
+    .hero-section {
+        margin-top: 45% !important;
+    }
+    .tile-pic-1 {
+        bottom: 6.5rem !important;
+    }
     .texty-part {
-        padding-top: 45% !important;
+        padding-top: 0 !important;
+    }
+    .offset-adj {
+        margin-left: 0 !important;
+    }
+    .text-overlay {
+        top: 55%;
+        left: 47%;
+    }
+    .mid-section-2 {
+        margin-top: 3rem !important;
+    }
+    .block-section {
+        width: 53% !important;
+    }
+    .next-project {
+        background-size: cover;
+        width: 43.833vw !important;
+        height: 43.833vw !important;
+        .mat-display-2 {
+            font-size: 6.5vw;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .hero-section {
+        margin-top: 35%;
+    }
+    .offset-adj {
+        margin-left: 56.5% !important;
+    }
+    .texty-part {
+        padding-top: 10%;
+    }
+}
+@media (min-width: 1024px) {
+    .texty-part {
+        padding-top: 52% !important;
     }
     .offset-adj {
         margin-left: 54.5% !important;
@@ -142,7 +185,7 @@ footer {
 }
 @media (min-width: 1366px) {
     .texty-part {
-        padding-top: 81% !important;
+        padding-top: 63% !important;
     }
 } 
 @media (min-width: 1920px) {

@@ -18,6 +18,11 @@
         max-width: 79.167vw;
     }
 }
+@media (max-width: 575px) {
+    img {
+        width: calc(10.6vw + 19%) !important;
+    }
+}
 
 
 

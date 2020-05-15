@@ -4,7 +4,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)"
       [ngClass]="{'hidden': !(isHandset$ | async)}">
-    <mat-toolbar>
+    <mat-toolbar class="sidenav-topbar">
       <div class="spacer"></div>
       <button
       role="button"
@@ -15,9 +15,10 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item (click)="onSidenavClick('home')">Home</a>
+      <a mat-list-item (click)="onSidenavClick('bio')">Bio</a>
+      <a mat-list-item (click)="onSidenavClick('learn')">Learn</a>
+      <a mat-list-item (click)="onSidenavClick('call')">Call</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
